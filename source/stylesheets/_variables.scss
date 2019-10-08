@@ -91,6 +91,23 @@ $phone-width: $tablet-width - $nav-width !default; // min width before reverting
 $nav-footer-border-color: #666 !default;
 $search-box-border-color: #666 !default;
 
+.sign-up-btn {
+  display: inline-block;
+  border-radius: 4px;
+  border: none;
+  background-color: #426bff;
+  color: #ffffff !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+  letter-spacing: .13em;
+  text-align: center;
+  padding: 0 20px;
+  text-decoration: none;
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // INTERNAL
