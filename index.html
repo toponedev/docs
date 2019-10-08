@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <link href="images/favicon.png" rel="icon" type="image/png" />
+    <title>TOP.ONE API Reference</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -201,7 +202,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -212,9 +213,6 @@
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -225,279 +223,2221 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#getting-started" class="toc-h1 toc-link" data-title="Getting Started">Getting Started</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#sign-up" class="toc-h2 toc-link" data-title="Sign Up">Sign Up</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#create-appid-and-appkey" class="toc-h2 toc-link" data-title="Create appId and appKey">Create appId and appKey</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#get-api-token" class="toc-h2 toc-link" data-title="Get API Token">Get API Token</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#public-http-api" class="toc-h1 toc-link" data-title="Public HTTP API">Public HTTP API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-market-list" class="toc-h2 toc-link" data-title="Get Market List">Get Market List</a>
+                  </li>
+                  <li>
+                    <a href="#get-latest-tickers-for-all-pairs" class="toc-h2 toc-link" data-title="Get Latest Tickers for All Pairs">Get Latest Tickers for All Pairs</a>
+                  </li>
+                  <li>
+                    <a href="#get-market-depth" class="toc-h2 toc-link" data-title="Get Market Depth">Get Market Depth</a>
+                  </li>
+                  <li>
+                    <a href="#get-the-most-recent-trades" class="toc-h2 toc-link" data-title="Get the Most Recent Trades">Get the Most Recent Trades</a>
+                  </li>
+                  <li>
+                    <a href="#get-historical-trades" class="toc-h2 toc-link" data-title="Get Historical Trades">Get Historical Trades</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#private-http-api" class="toc-h1 toc-link" data-title="Private HTTP API">Private HTTP API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-balances" class="toc-h2 toc-link" data-title="Get Balances">Get Balances</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-open-orders" class="toc-h2 toc-link" data-title="Get All Open Orders">Get All Open Orders</a>
+                  </li>
+                  <li>
+                    <a href="#limit-order" class="toc-h2 toc-link" data-title="Limit Order">Limit Order</a>
+                  </li>
+                  <li>
+                    <a href="#market-order" class="toc-h2 toc-link" data-title="Market Order">Market Order</a>
+                  </li>
+                  <li>
+                    <a href="#cancel-order" class="toc-h2 toc-link" data-title="Cancel Order">Cancel Order</a>
+                  </li>
+                  <li>
+                    <a href="#get-historical-orders" class="toc-h2 toc-link" data-title="Get Historical Orders">Get Historical Orders</a>
+                  </li>
+                  <li>
+                    <a href="#get-historical-trades" class="toc-h2 toc-link" data-title="Get Historical Trades">Get Historical Trades</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#websocket-introduction" class="toc-h1 toc-link" data-title="Websocket Introduction">Websocket Introduction</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#heartbeat-and-connection" class="toc-h2 toc-link" data-title="Heartbeat and Connection">Heartbeat and Connection</a>
+                  </li>
+                  <li>
+                    <a href="#subscribe-to-topic" class="toc-h2 toc-link" data-title="Subscribe to Topic">Subscribe to Topic</a>
+                  </li>
+                  <li>
+                    <a href="#unsubscribe" class="toc-h2 toc-link" data-title="Unsubscribe">Unsubscribe</a>
+                  </li>
+                  <li>
+                    <a href="#pull-data" class="toc-h2 toc-link" data-title="Pull Data">Pull Data</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#public-websocket" class="toc-h1 toc-link" data-title="Public Websocket ">Public Websocket </a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#public-websocket-url" class="toc-h2 toc-link" data-title="Public Websocket URL">Public Websocket URL</a>
+                  </li>
+                  <li>
+                    <a href="#market-candlestick" class="toc-h2 toc-link" data-title="Market Candlestick">Market Candlestick</a>
+                  </li>
+                  <li>
+                    <a href="#market-depth" class="toc-h2 toc-link" data-title="Market Depth">Market Depth</a>
+                  </li>
+                  <li>
+                    <a href="#ticker-data" class="toc-h2 toc-link" data-title="Ticker Data">Ticker Data</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#private-websocket" class="toc-h1 toc-link" data-title="Private Websocket ">Private Websocket </a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#general" class="toc-h2 toc-link" data-title="General">General</a>
+                  </li>
+                  <li>
+                    <a href="#private-websocket-url" class="toc-h2 toc-link" data-title="Private Websocket URL">Private Websocket URL</a>
+                  </li>
+                  <li>
+                    <a href="#subscribe-to-account-updates" class="toc-h2 toc-link" data-title="Subscribe to Account Updates">Subscribe to Account Updates</a>
+                  </li>
+                  <li>
+                    <a href="#subscribe-to-order-updates" class="toc-h2 toc-link" data-title="Subscribe to Order Updates">Subscribe to Order Updates</a>
+                  </li>
+              </ul>
           </li>
       </ul>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
+            <li><a href='https://github.com/toponedev/docs'>Check out these docs on Github</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
-
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
 <blockquote>
-<p>To authorize, use this code:</p>
+<p>Setup</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<pre class="highlight shell tab-shell"><code><span class="c"># make sure you have curl installed</span>
+</code></pre>
+<p>TOP.ONE provides both HTTP and websocket APIs for interacting with the exchange. Both allow read access to public market data and private read access to your account. Private write access to your account is available via the private HTTP API.</p>
+<h1 id='getting-started'>Getting Started</h1><h3 id='sign-up'>Sign Up</h3>
+<p>If you do not have a TOP.ONE account yet, use the button below to sign up.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p><a href="https://top.one/user/register" target="_blank" class="sign-up-btn">Sign Up</a></p>
+<h3 id='create-appid-and-appkey'>Create appId and appKey</h3>
+<p>Once you are verified and have an account, you can login in <a href="https://top.one">TOP.ONE</a>, visit the user center page, ask for your appId and appKey.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+<p>It is recommended to bind a static IP when creating them to improving security. </p>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+<p>As the name implies, your secret must remain private! If you suspect your key has been compromised, immediately disable that key and generate a new one.</p>
+<h3 id='get-api-token'>Get API Token</h3>
+<p>Token is used for order authentication.</p>
+
+<p>The Token is valid for several hours, you should get a new one every hour.</p>
+
+<blockquote>
+<p>Request: Get API Token </p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="c"># The frequency of interface requests is limited to one time per minute. </span>
+<span class="c"># Do not request frequently, otherwise it will be blocked for one hour.</span>
+
+<span class="c"># The sig is generated by SHA256 encryption of the parameters(appKey,random,time).</span>
+ <span class="nb">echo</span> -n <span class="s2">"appKey=xxxxxxxx&amp;random=200022&amp;time=1409309229"</span> | openssl sha256
+
+<span class="c"># You will use this signature in your request.</span>
+<span class="c"># For example:</span>
+ curl <span class="s2">"https://gateway.topone.run/u/v1/api/token?appId=xxx&amp;random=200022&amp;time=1409309229&amp;sig=2a7849ecfae71161c8e9a364e21d9de9"</span>
 </code></pre>
 <blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
+<p>Response: Get API Token </p>
 </blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"apiToken"</span><span class="p">:</span><span class="w"> </span><span class="s2">"topapi:3V1YhD5ulgEx3s6vUWscAyHVF2q5sm6R8tOsjvde1aVK5MQ81HsO0xbVa8011zE35TkaARvUv6"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h1 id='public-http-api'>Public HTTP API</h1>
+<p>The public HTTP API allows read access to public market data.</p>
+<h2 id='get-market-list'>Get Market List</h2>
+<p>This endpoint returns all TOP.ONE&#39;s supported trading symbol.</p>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+<blockquote>
+<p>Request: Get Market List</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://gateway.topone.run/t/v1/market/list"</span>
 </code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Response: Get Market List</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC/USDT"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"stockName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"stockPrec"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"moneyName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USDT"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"moneyPrec"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"feePrec"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"minAmount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.00000000"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"isTrading"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">             
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+<p>Response data:</p>
+
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default</th>
+<th>Field</th>
+<th>Data Type</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td>name</td>
+<td>String</td>
+<td>market name</td>
+</tr>
+<tr>
+<td>stockName</td>
+<td>String</td>
+<td>stock coin name</td>
+</tr>
+<tr>
+<td>stockPrec</td>
+<td>Integer</td>
+<td>stock coin precision</td>
+</tr>
+<tr>
+<td>moneyName</td>
+<td>String</td>
+<td>base coin</td>
+</tr>
+<tr>
+<td>moneyPrec</td>
+<td>Integer</td>
+<td>base coin precision</td>
+</tr>
+<tr>
+<td>feePrec</td>
+<td>String</td>
+<td>fee precision</td>
+</tr>
+<tr>
+<td>minAmount</td>
+<td>String</td>
+<td>order min amount</td>
+</tr>
+<tr>
+<td>isTrading</td>
+<td>Boolean</td>
+<td>trading status</td>
+</tr>
+</tbody></table>
+<h2 id='get-latest-tickers-for-all-pairs'>Get Latest Tickers for All Pairs</h2>
+<p>Retrieves summary information for each currency pair listed on the exchange. </p>
+
+<blockquote>
+<p>Request: Get Latest Tickers for All Pairs</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://gateway.topone.run/t/v1/market/ticker"</span>
+</code></pre>
+<blockquote>
+<p>Response: Get Latest Tickers for All Pairs</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"BTC/USDT"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"lastPrice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10255.5341"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"lowestAsk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10289"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"highestBid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10009"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"percentChange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0240414333045545"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"baseVolume"</span><span class="p">:</span><span class="w"> </span><span class="s2">"34139211.2527106788"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"quoteVolume"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3363.760377"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"high24hr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10288.9997"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"low24hr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10009.0027"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Response data:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>lastPrice</td>
+<td>String</td>
+<td>Execution price for the most recent trade for this pair.</td>
+</tr>
+<tr>
+<td>lowestAsk</td>
+<td>String</td>
+<td>Lowest current purchase price for this asset.</td>
+</tr>
+<tr>
+<td>highestBid</td>
+<td>String</td>
+<td>Highest current sale price for this asset.</td>
+</tr>
+<tr>
+<td>percentChange</td>
+<td>String</td>
+<td>Price change percentage.</td>
+</tr>
+<tr>
+<td>baseVolume</td>
+<td>String</td>
+<td>Base units traded in the last 24 hours.</td>
+</tr>
+<tr>
+<td>quoteVolume</td>
+<td>String</td>
+<td>Quoted units traded in the last 24 hours.</td>
+</tr>
+<tr>
+<td>isFrozen</td>
+<td>String</td>
+<td>Indicates if this market is currently trading or not.</td>
+</tr>
+<tr>
+<td>high24hr</td>
+<td>String</td>
+<td>The highest execution price for this pair within the last 24 hours.</td>
+</tr>
+<tr>
+<td>low24hr</td>
+<td>String</td>
+<td>The lowest execution price for this pair within the last 24 hours.</td>
+</tr>
+</tbody></table>
+<h2 id='get-market-depth'>Get Market Depth</h2>
+<p>This endpoint retrieves the current order book of a specific pair.</p>
+
+<blockquote>
+<p>Request: Get Market Depth</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://gateway.topone.run/t/v1/market/depth?market=BTC/USDT"</span>
+</code></pre>
+<p>Query Params: </p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>market</td>
+<td>String</td>
+<td>market name</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Response: Get Market Depth</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"time"</span><span class="p">:</span><span class="w"> </span><span class="mf">1569493654.07239</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"asks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"8443.04"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.474139"</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"8446.88"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.052319"</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"8447.21"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.490829"</span><span class="p">]</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"bids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"8416.54"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.071663"</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"8403.51"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.13025"</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"8394.36"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.019315"</span><span class="p">]</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Response data:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>time</td>
+<td>Float</td>
+<td>create time</td>
+</tr>
+<tr>
+<td>asks</td>
+<td>Array</td>
+<td>[price, amount] order by price asc</td>
+</tr>
+<tr>
+<td>bids</td>
+<td>Array</td>
+<td>[price, amount] order by price desc</td>
+</tr>
+</tbody></table>
+<h2 id='get-the-most-recent-trades'>Get the Most Recent Trades</h2>
+<p>This endpoint retrieves the most recent trades with their price, volume, and direction.</p>
+
+<blockquote>
+<p>Request: Get the Most Recent Trades</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://gateway.topone.run/t/v1/market/recent/trades?market=BTC/USDT"</span>
+</code></pre>
+<p>Query Params: </p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>market</td>
+<td>String</td>
+<td>market name</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Response: Get the Most Recent Trades</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">[</span><span class="mf">1569487995.803009</span><span class="p">,</span><span class="w"> </span><span class="s2">"10255.5341"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.019399"</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="mf">1569487995.802333</span><span class="p">,</span><span class="w"> </span><span class="s2">"10179.5404"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.033313"</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="mf">1569487995.794085</span><span class="p">,</span><span class="w"> </span><span class="s2">"10196.5787"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.032284"</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">]</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Response data:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>list.item</td>
+<td>Array</td>
+<td>[time, price, amount, side]  side(1:sell,2:buy)</td>
+</tr>
+</tbody></table>
+<h2 id='get-historical-trades'>Get Historical Trades</h2>
+<p>Get historical trades</p>
+
+<blockquote>
+<p>Request: Get Historical Trades</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://gateway.topone.run/t/v1/market/historical/trades?market=BTC/USDT&amp;pageSize=100&amp;pageCursor=0&amp;pageMark=0"</span>
+</code></pre>
+<p>Query Params:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>market</td>
+<td>String</td>
+<td>market name, eg. BTC/USDT</td>
+</tr>
+<tr>
+<td>pageSize</td>
+<td>Integer</td>
+<td>Default 100, max 500.</td>
+</tr>
+<tr>
+<td>pageCursor</td>
+<td>Integer</td>
+<td><code>id</code> of the last item returned from the last request, default 0</td>
+</tr>
+<tr>
+<td>pageMark</td>
+<td>Integer</td>
+<td>Get from the last request, default 0</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Response: Get Historical Trades</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"pageMark"</span><span class="p">:</span><span class="w"> </span><span class="mi">1567267200</span><span class="p">,</span><span class="w">     </span><span class="err">//</span><span class="w"> </span><span class="err">For</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">request</span><span class="w">
+        </span><span class="s2">"list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">200556</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"createTime"</span><span class="p">:</span><span class="w"> </span><span class="mf">1569487486.22367</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10177.39430000"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"dealStock"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.04687400"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">200555</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"createTime"</span><span class="p">:</span><span class="w"> </span><span class="mf">1569487486.192549</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10194.60830000"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"dealStock"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.03480500"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Response data:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>id</td>
+</tr>
+<tr>
+<td>createTime</td>
+<td>Float</td>
+<td>create time</td>
+</tr>
+<tr>
+<td>side</td>
+<td>Integer</td>
+<td>1:sell, 2:buy</td>
+</tr>
+<tr>
+<td>price</td>
+<td>String</td>
+<td>deal price</td>
+</tr>
+<tr>
+<td>dealStock</td>
+<td>String</td>
+<td>deal amount</td>
+</tr>
+</tbody></table>
+<h1 id='private-http-api'>Private HTTP API</h1>
+<p>The private HTTP API allows read / write access to your private account. You have to use <a href="#get-api-token">API Token</a> to send requests.</p>
+<h2 id='get-balances'>Get Balances</h2>
+<p>This endpoint returns all supported market. </p>
+
+<blockquote>
+<p>Request: Get Balances</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+     -H <span class="s2">"Authorization: YOUR_API_TOKEN"</span> <span class="se">\</span>
+     https://gateway.topone.run/t/v1/balance/query?assets<span class="o">=</span>BTC,EOS,ETH
+</code></pre>
+<p>Query Params:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>assets</td>
+<td>String</td>
+<td>List of assets you want to query, separate by <code>,</code></td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Response: Get Balances</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">   
+   </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+   </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+       </span><span class="s2">"list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+           </span><span class="p">{</span><span class="w">
+               </span><span class="s2">"asset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETH"</span><span class="p">,</span><span class="w">                  
+               </span><span class="s2">"available"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8517.32476151"</span><span class="p">,</span><span class="w">    
+               </span><span class="s2">"freeze"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">                  
+               </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8517.32476151"</span><span class="p">,</span><span class="w">        
+               </span><span class="s2">"anchorValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00003567"</span><span class="w">      
+           </span><span class="p">}</span><span class="w">
+       </span><span class="p">]</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Response data:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>asset</td>
+<td>String</td>
+<td>asset name</td>
 </tr>
 <tr>
 <td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>String</td>
+<td>available balance</td>
+</tr>
+<tr>
+<td>freeze</td>
+<td>String</td>
+<td>order freeze</td>
+</tr>
+<tr>
+<td>total</td>
+<td>String</td>
+<td>total balance</td>
+</tr>
+<tr>
+<td>anchorValue</td>
+<td>Integer</td>
+<td>BTC valuation</td>
 </tr>
 </tbody></table>
+<h2 id='get-all-open-orders'>Get All Open Orders</h2>
+<p>This endpoint returns all supported market.</p>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Request: Get All Open Orders</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+     -H <span class="s2">"Authorization: YOUR_API_TOKEN"</span> <span class="se">\</span>
+     https://gateway.topone.run/t/v1/order/query?market<span class="o">=</span>BTC/USDT&amp;page<span class="o">=</span>1&amp;pageSize<span class="o">=</span>20
+</code></pre>
+<p>Query Params:</p>
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Field</th>
+<th>Data Type</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>market</td>
+<td>String</td>
+<td>market name</td>
+</tr>
+<tr>
+<td>page</td>
+<td>Integer</td>
+<td>current page</td>
+</tr>
+<tr>
+<td>pageSize</td>
+<td>Integer</td>
+<td>Number of displays per page</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Response: Get All Open Orders</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">   
+   </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+   </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+       </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+           </span><span class="p">{</span><span class="w">
+               </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">26211</span><span class="p">,</span><span class="w">                      
+               </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">                         
+               </span><span class="s2">"market"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TOP/ETH"</span><span class="p">,</span><span class="w">              
+               </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">                        
+               </span><span class="s2">"createTime"</span><span class="p">:</span><span class="w"> </span><span class="mf">1526205633.6342139</span><span class="p">,</span><span class="w">  
+               </span><span class="s2">"updateTime"</span><span class="p">:</span><span class="w"> </span><span class="mf">1526205633.6342139</span><span class="p">,</span><span class="w">  
+               </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00001057"</span><span class="p">,</span><span class="w">                     
+               </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10000"</span><span class="p">,</span><span class="w">                 
+               </span><span class="s2">"left"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10000"</span><span class="p">,</span><span class="w">                   
+               </span><span class="s2">"dealStock"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">                 
+               </span><span class="s2">"dealMoney"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">                
+           </span><span class="p">}</span><span class="w">
+       </span><span class="p">]</span><span class="w">
+   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<p>Response data:</p>
+
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Field</th>
+<th>Data Type</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>id</td>
+<td>Integer</td>
+<td>order id</td>
+</tr>
+<tr>
+<td>type</td>
+<td>Integer</td>
+<td>1: limit order 2: market order</td>
+</tr>
+<tr>
+<td>market</td>
+<td>String</td>
+<td>market name</td>
+</tr>
+<tr>
+<td>side</td>
+<td>Integer</td>
+<td>1: sell 2: buy</td>
+</tr>
+<tr>
+<td>createTime</td>
+<td>Float</td>
+<td>order time</td>
+</tr>
+<tr>
+<td>updateTime</td>
+<td>Float</td>
+<td>update time</td>
+</tr>
+<tr>
+<td>price</td>
+<td>String</td>
+<td>order price</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>String</td>
+<td>order amount</td>
+</tr>
+<tr>
+<td>left</td>
+<td>String</td>
+<td>order left</td>
+</tr>
+<tr>
+<td>dealStock</td>
+<td>String</td>
+<td>quote volume</td>
+</tr>
+<tr>
+<td>dealMoney</td>
+<td>String</td>
+<td>base volume</td>
 </tr>
 </tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
+<h2 id='limit-order'>Limit Order</h2>
+<p>This endpoint place a new limit order and send to the exchange to be matched.</p>
 
-<p>The Kittn API uses the following error codes:</p>
+<blockquote>
+<p>Request: Limit Order</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+     -H <span class="s2">"Authorization: YOUR_API_TOKEN"</span> <span class="se">\</span>
+     -H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+     -d <span class="s1">'{"market": "TOP/ETH", "side": 2, "amount": "1000", "price": "0.00001057"}'</span> <span class="se">\</span>
+     https://gateway.topone.run/t/v1/order/limit
+</code></pre>
+<p>Input Params:</p>
 
 <table><thead>
 <tr>
-<th>Error Code</th>
-<th>Meaning</th>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
+<td>market</td>
+<td>String</td>
+<td>market name</td>
 </tr>
 <tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
+<td>side</td>
+<td>Integer</td>
+<td>1: sell 2: buy</td>
 </tr>
 <tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+<td>amount</td>
+<td>String</td>
+<td>order size</td>
 </tr>
 <tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+<td>price</td>
+<td>String</td>
+<td>The limit price of limit order</td>
 </tr>
 </tbody></table>
 
+<blockquote>
+<p>Response: Limit Order</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">26211</span><span class="p">,</span><span class="w">                       
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">                         
+        </span><span class="s2">"market"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TOP/ETH"</span><span class="p">,</span><span class="w">               
+        </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">                         
+        </span><span class="s2">"createTime"</span><span class="p">:</span><span class="w"> </span><span class="mf">1526205633.6342139</span><span class="p">,</span><span class="w">  
+        </span><span class="s2">"updateTime"</span><span class="p">:</span><span class="w"> </span><span class="mf">1526205633.6342139</span><span class="p">,</span><span class="w">  
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00001057"</span><span class="p">,</span><span class="w">             
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">                       
+        </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10000"</span><span class="p">,</span><span class="w">                 
+        </span><span class="s2">"left"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10000"</span><span class="p">,</span><span class="w">                   
+        </span><span class="s2">"dealStock"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">                  
+        </span><span class="s2">"dealMoney"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">          
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Response data:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>order id</td>
+</tr>
+<tr>
+<td>type</td>
+<td>Integer</td>
+<td>1: limit order 2: market order</td>
+</tr>
+<tr>
+<td>market</td>
+<td>String</td>
+<td>market name</td>
+</tr>
+<tr>
+<td>side</td>
+<td>Integer</td>
+<td>1: sell 2: buy</td>
+</tr>
+<tr>
+<td>createTime</td>
+<td>Float</td>
+<td>order time</td>
+</tr>
+<tr>
+<td>updateTime</td>
+<td>Float</td>
+<td>update time</td>
+</tr>
+<tr>
+<td>price</td>
+<td>String</td>
+<td>order price</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Integer</td>
+<td>1:pending  2:completed  3:canceled 4:partial-canceled</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>String</td>
+<td>order amount</td>
+</tr>
+<tr>
+<td>left</td>
+<td>String</td>
+<td>order left</td>
+</tr>
+<tr>
+<td>dealStock</td>
+<td>String</td>
+<td>quote volume</td>
+</tr>
+<tr>
+<td>dealMoney</td>
+<td>String</td>
+<td>base volume</td>
+</tr>
+</tbody></table>
+<h2 id='market-order'>Market Order</h2>
+<p>This endpoint place a new market order and send to the exchange to be matched.</p>
+
+<blockquote>
+<p>Request: Market Order</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+     -H <span class="s2">"Authorization: YOUR_API_TOKEN"</span> <span class="se">\</span>
+     -H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+     -d <span class="s1">'{"market": "TOP/ETH", "side": 2, "amount": "1000"}'</span> <span class="se">\</span>
+     https://gateway.topone.run/t/v1/order/market
+</code></pre>
+<p>Input Params:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>market</td>
+<td>String</td>
+<td>market name</td>
+</tr>
+<tr>
+<td>side</td>
+<td>Integer</td>
+<td>1: sell 2: buy</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>String</td>
+<td>order size</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Response: Market Order</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5104074</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"market"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TOP/ETH"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createTime"</span><span class="p">:</span><span class="w"> </span><span class="mf">1560843193.14178</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updateTime"</span><span class="p">:</span><span class="w"> </span><span class="mf">1560843193.14178</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0123"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1000"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"left"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1000"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"dealStock"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"dealMoney"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Response data:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>order id</td>
+</tr>
+<tr>
+<td>type</td>
+<td>Integer</td>
+<td>1: limit order 2: market order</td>
+</tr>
+<tr>
+<td>market</td>
+<td>String</td>
+<td>market name</td>
+</tr>
+<tr>
+<td>side</td>
+<td>Integer</td>
+<td>1: sell 2: buy</td>
+</tr>
+<tr>
+<td>createTime</td>
+<td>Float</td>
+<td>order time</td>
+</tr>
+<tr>
+<td>updateTime</td>
+<td>Float</td>
+<td>update time</td>
+</tr>
+<tr>
+<td>price</td>
+<td>String</td>
+<td>order price</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Integer</td>
+<td>1:pending  2:completed  3:canceled 4:partial-canceled</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>String</td>
+<td>order amount</td>
+</tr>
+<tr>
+<td>left</td>
+<td>String</td>
+<td>order left</td>
+</tr>
+<tr>
+<td>dealStock</td>
+<td>String</td>
+<td>quote volume</td>
+</tr>
+<tr>
+<td>dealMoney</td>
+<td>String</td>
+<td>base volume</td>
+</tr>
+</tbody></table>
+<h2 id='cancel-order'>Cancel Order</h2>
+<p>This endpoint submit a request to cancel an order.</p>
+
+<blockquote>
+<p>Request: Cancel Order</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+     -H <span class="s2">"Authorization: YOUR_API_TOKEN"</span> <span class="se">\</span>
+     -H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+     -d <span class="s1">'{"market": "TOP/ETH", "orderId": 5104074}'</span> <span class="se">\</span>
+     https://gateway.topone.run/t/v1/order/cancel
+</code></pre>
+<p>Input Params:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>market</td>
+<td>String</td>
+<td>market name</td>
+</tr>
+<tr>
+<td>orderId</td>
+<td>Integer</td>
+<td>order id</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Response: Cancel Order</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">26316</span><span class="p">,</span><span class="w"> 
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> 
+        </span><span class="s2">"market"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TOP/ETH"</span><span class="p">,</span><span class="w"> 
+        </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> 
+        </span><span class="s2">"createTime"</span><span class="p">:</span><span class="w"> </span><span class="mf">1526209523.637193</span><span class="p">,</span><span class="w"> 
+        </span><span class="s2">"updateTime"</span><span class="p">:</span><span class="w"> </span><span class="mf">1526209523.637193</span><span class="p">,</span><span class="w"> 
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000101"</span><span class="p">,</span><span class="w"> 
+        </span><span class="s2">"dealMoney"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w"> 
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> 
+        </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10000"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"left"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10000"</span><span class="p">,</span><span class="w"> 
+        </span><span class="s2">"dealStock"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Response data:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>order id</td>
+</tr>
+<tr>
+<td>type</td>
+<td>Integer</td>
+<td>1: limit order 2: market order</td>
+</tr>
+<tr>
+<td>market</td>
+<td>String</td>
+<td>market name</td>
+</tr>
+<tr>
+<td>side</td>
+<td>Integer</td>
+<td>1: sell 2: buy</td>
+</tr>
+<tr>
+<td>createTime</td>
+<td>Float</td>
+<td>order time</td>
+</tr>
+<tr>
+<td>updateTime</td>
+<td>Float</td>
+<td>update time</td>
+</tr>
+<tr>
+<td>price</td>
+<td>String</td>
+<td>order price</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Integer</td>
+<td>1:pending  2:completed  3:canceled 4:partial-canceled</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>String</td>
+<td>order amount</td>
+</tr>
+<tr>
+<td>left</td>
+<td>String</td>
+<td>order left</td>
+</tr>
+<tr>
+<td>dealStock</td>
+<td>String</td>
+<td>quote volume</td>
+</tr>
+<tr>
+<td>dealMoney</td>
+<td>String</td>
+<td>base volume</td>
+</tr>
+</tbody></table>
+<h2 id='get-historical-orders'>Get Historical Orders</h2>
+<p>This endpoint returns historical orders based on a specific searching criteria.</p>
+
+<blockquote>
+<p>Request: Get Historical Orders</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+     -H <span class="s2">"Authorization: YOUR_API_TOKEN"</span> <span class="se">\</span>
+     https://gateway.topone.run/t/v1/order/history?pageMark<span class="o">=</span>0&amp;pageCursor<span class="o">=</span>0&amp;pageSize<span class="o">=</span>20&amp;market<span class="o">=</span>TOP/ETH&amp;side<span class="o">=</span>1&amp;startTime<span class="o">=</span>0&amp;endTime<span class="o">=</span>0
+</code></pre>
+<p>Query Params:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pageSize</td>
+<td>Integer</td>
+<td>Default 100, max 500.</td>
+</tr>
+<tr>
+<td>pageCursor</td>
+<td>Integer</td>
+<td><code>id</code> of the last item returned from the last request, default 0</td>
+</tr>
+<tr>
+<td>pageMark</td>
+<td>Integer</td>
+<td>Get from the last request, default 0</td>
+</tr>
+<tr>
+<td>market</td>
+<td>String</td>
+<td>market name</td>
+</tr>
+<tr>
+<td>side</td>
+<td>Integer</td>
+<td>1:sell 2:buy</td>
+</tr>
+<tr>
+<td>startTime</td>
+<td>Integer</td>
+<td>unix timestamp</td>
+</tr>
+<tr>
+<td>endTime</td>
+<td>Integer</td>
+<td>unix timestamp</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Response: Get Historical Orders</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"pageMark"</span><span class="p">:</span><span class="w"> </span><span class="mi">1559318400</span><span class="p">,</span><span class="w">     </span><span class="err">//</span><span class="w"> </span><span class="err">For</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">request</span><span class="w">
+        </span><span class="s2">"list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">26316</span><span class="p">,</span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w">        
+                </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w">  
+                </span><span class="s2">"dealMoney"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w">   
+                </span><span class="s2">"createTime"</span><span class="p">:</span><span class="w"> </span><span class="mf">1526209523.637193</span><span class="p">,</span><span class="w"> </span><span class="err"> </span><span class="w">  
+                </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w">  
+                </span><span class="s2">"finishTime"</span><span class="p">:</span><span class="w"> </span><span class="mf">1526209523.637193</span><span class="p">,</span><span class="w"> </span><span class="err"> </span><span class="w">  
+                </span><span class="s2">"market"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TOP/ETH"</span><span class="p">,</span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w">  
+                </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">                          
+                </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000101"</span><span class="p">,</span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> 
+                </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10000"</span><span class="p">,</span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> 
+                </span><span class="s2">"dealStock"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">            
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Response data:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>order id</td>
+</tr>
+<tr>
+<td>type</td>
+<td>Integer</td>
+<td>1: limit order 2: market order</td>
+</tr>
+<tr>
+<td>market</td>
+<td>String</td>
+<td>market name</td>
+</tr>
+<tr>
+<td>side</td>
+<td>Integer</td>
+<td>1: sell 2: buy</td>
+</tr>
+<tr>
+<td>createTime</td>
+<td>Float</td>
+<td>order time</td>
+</tr>
+<tr>
+<td>updateTime</td>
+<td>Float</td>
+<td>update time</td>
+</tr>
+<tr>
+<td>price</td>
+<td>String</td>
+<td>order price</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Integer</td>
+<td>1:pending  2:completed  3:canceled 4:partial-canceled</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>String</td>
+<td>order amount</td>
+</tr>
+<tr>
+<td>left</td>
+<td>String</td>
+<td>order left</td>
+</tr>
+<tr>
+<td>dealStock</td>
+<td>String</td>
+<td>quote volume</td>
+</tr>
+<tr>
+<td>dealMoney</td>
+<td>String</td>
+<td>base volume</td>
+</tr>
+</tbody></table>
+<h2 id='get-historical-trades'>Get Historical Trades</h2>
+<p>This endpoint returns historical trades based on a specific searching criteria.</p>
+
+<blockquote>
+<p>Request: Get Historical Trades</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+     -H <span class="s2">"Authorization: YOUR_API_TOKEN"</span> <span class="se">\</span>
+     https://gateway.topone.run/t/v1/deals/history?pageMark<span class="o">=</span>0&amp;pageCursor<span class="o">=</span>0&amp;pageSize<span class="o">=</span>20&amp;market<span class="o">=</span>TOP/ETH&amp;startTime<span class="o">=</span>0&amp;endTime<span class="o">=</span>0
+</code></pre>
+<p>Query Params:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pageSize</td>
+<td>Integer</td>
+<td>Default 100, max 500.</td>
+</tr>
+<tr>
+<td>pageCursor</td>
+<td>Integer</td>
+<td><code>id</code> of the last item returned from the last request, default 0</td>
+</tr>
+<tr>
+<td>pageMark</td>
+<td>Integer</td>
+<td>Get from the last request, default 0</td>
+</tr>
+<tr>
+<td>market</td>
+<td>String</td>
+<td>market name</td>
+</tr>
+<tr>
+<td>startTime</td>
+<td>Integer</td>
+<td>unix timestamp</td>
+</tr>
+<tr>
+<td>endTime</td>
+<td>Integer</td>
+<td>unix timestamp</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Response: Get Historical Trades</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"pageMark"</span><span class="p">:</span><span class="w"> </span><span class="mi">1559318400</span><span class="p">,</span><span class="w">     </span><span class="err">//</span><span class="w"> </span><span class="err">For</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">request</span><span class="w">
+        </span><span class="s2">"list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"createTime"</span><span class="p">:</span><span class="w"> </span><span class="mf">1526209901.418669</span><span class="p">,</span><span class="w">    
+                </span><span class="s2">"market"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TOP/ETH"</span><span class="p">,</span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w">     
+                </span><span class="s2">"dealId"</span><span class="p">:</span><span class="w"> </span><span class="mi">47521</span><span class="p">,</span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w">      
+                </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">                          
+                </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00600000"</span><span class="p">,</span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w">      
+                </span><span class="s2">"dealStock"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16.00000000"</span><span class="p">,</span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w">   
+                </span><span class="s2">"dealMoney"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0960000000000000"</span><span class="p">,</span><span class="w"> </span><span class="err"> </span><span class="w">
+                </span><span class="s2">"feeAsset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TOP"</span><span class="p">,</span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w">     
+                </span><span class="s2">"fee"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0E-16"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Response data:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>createTime</td>
+<td>Float</td>
+<td>deal time</td>
+</tr>
+<tr>
+<td>market</td>
+<td>Integer</td>
+<td>market name</td>
+</tr>
+<tr>
+<td>dealId</td>
+<td>String</td>
+<td>deal id</td>
+</tr>
+<tr>
+<td>side</td>
+<td>Integer</td>
+<td>1: sell 2: buy</td>
+</tr>
+<tr>
+<td>price</td>
+<td>Float</td>
+<td>deal price</td>
+</tr>
+<tr>
+<td>dealStock</td>
+<td>Float</td>
+<td>deal quote volume</td>
+</tr>
+<tr>
+<td>dealMoney</td>
+<td>String</td>
+<td>deal base volume</td>
+</tr>
+<tr>
+<td>feeAsset</td>
+<td>Integer</td>
+<td>fee coin</td>
+</tr>
+<tr>
+<td>fee</td>
+<td>String</td>
+<td>fee amount</td>
+</tr>
+</tbody></table>
+<h1 id='websocket-introduction'>Websocket Introduction</h1><h2 id='heartbeat-and-connection'>Heartbeat and Connection</h2>
+<p>When the user&#39;s Websocket client connects to the TOP.ONE Websocket server, the server sends <code>ping</code> messages to it regularly.</p>
+
+<p>When the user&#39;s Websocket client receives this heartbeat message, it should reply to the <code>pong</code> message.</p>
+
+<p>When the Websocket server does not receive any <code>pong</code> messages within 3 minutes, the server will actively disconnect from the client.</p>
+<h2 id='subscribe-to-topic'>Subscribe to Topic</h2>
+<blockquote>
+<p>Subscribe request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sub_kline_BTC/USDT_1m"</span><span class="p">,</span><span class="w">  
+  </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="s2">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"zh-CN"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>To receive data you have to send a &quot;sub&quot; message first.</p>
+
+<p><code>{&quot;id&quot;: &quot;id generate by client&quot;, &quot;method&quot;: &quot;topic to sub&quot;, &quot;params&quot;: {}, &quot;lang&quot;: &quot;zh-CN&quot;}</code></p>
+
+<blockquote>
+<p>Subscribe response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sub_kline_BTC/USDT_1m"</span><span class="p">,</span><span class="w">  
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="mi">1569569618759</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>After successfully subscribed, you will receive a response to confirm subscription</p>
+
+<p><code>{&quot;code&quot;: 0, &quot;msg&quot;: &quot;OK&quot;, &quot;id&quot;: &quot;id generate by client&quot;, &quot;method&quot;: &quot;topic to sub&quot;, &quot;data&quot;: {}, &quot;ts&quot;: 1569569618759}</code></p>
+
+<blockquote>
+<p>Topic update</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sub_kline_BTC/USDT_1m"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="mi">1561948335075</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">[</span><span class="mi">1521700740</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.08040"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.07850"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.08067"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.07850"</span><span class="p">,</span><span class="w"> </span><span class="s2">"35.585"</span><span class="p">,</span><span class="w"> </span><span class="s2">"2.82398955"</span><span class="p">]</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Then, you will received message when there is update in this topic</p>
+
+<p><code>{&quot;method&quot;: &quot;topic to sub&quot;, &quot;data&quot;: {}, &quot;ts&quot;: 1561948335075}</code></p>
+<h2 id='unsubscribe'>Unsubscribe</h2>
+<blockquote>
+<p>Unsubscribe request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unsub_kline_BTC/USDT_1m"</span><span class="p">,</span><span class="w">  
+  </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="s2">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"zh-CN"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>To unsubscribe, you need to send below message</p>
+
+<p><code>{&quot;id&quot;: &quot;id generate by client&quot;, &quot;method&quot;: &quot;topic to unsub&quot;, &quot;params&quot;: {}, &quot;lang&quot;: &quot;zh-CN&quot;}</code></p>
+
+<blockquote>
+<p>Unsubscribe response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unsub_kline_BTC/USDT_1m"</span><span class="p">,</span><span class="w">  
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="mi">1569569618759</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>And you will receive a message to confirm the unsubscribe</p>
+
+<p><code>{&quot;code&quot;: 0, &quot;msg&quot;: &quot;OK&quot;, &quot;id&quot;: &quot;id generate by client&quot;, &quot;method&quot;: &quot;topic to unsub&quot;, &quot;data&quot;: {}, &quot;ts&quot;: 1569569618759}</code></p>
+<h2 id='pull-data'>Pull Data</h2>
+<p>While connected to websocket, you can also use it in pull style by sending message to the server.</p>
+
+<blockquote>
+<p>Pull request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"req_kline_BTC/USDT_1m"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"from"</span><span class="p">:</span><span class="w"> </span><span class="mi">1561948335</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"to"</span><span class="p">:</span><span class="w"> </span><span class="mi">1562948335</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"zh-CN"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>To request pull style data, you send below message</p>
+
+<p><code>{&quot;id&quot;: &quot;id generate by client&quot;, &quot;method&quot;: &quot;topic to req&quot;, &quot;params&quot;: {}, &quot;lang&quot;: &quot;zh-CN&quot;}</code></p>
+
+<blockquote>
+<p>Pull response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"req_kline_BTC/USDT_1m"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="mi">1561948335075</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">[</span><span class="mi">1521700740</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.08040"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.07850"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.08067"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.07850"</span><span class="p">,</span><span class="w"> </span><span class="s2">"35.585"</span><span class="p">,</span><span class="w"> </span><span class="s2">"2.82398955"</span><span class="p">]</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>You will receive a response accordingly and immediately</p>
+
+<p><code>{&quot;code&quot;: 0, &quot;msg&quot;: &quot;OK&quot;, &quot;id&quot;: &quot;id generate by client&quot;, &quot;method&quot;: &quot;topic to pull&quot;, &quot;data&quot;: {}, &quot;ts&quot;: 1561948335075}</code></p>
+<h1 id='public-websocket'>Public Websocket </h1><h2 id='public-websocket-url'>Public Websocket URL</h2>
+<p><code>wss://gateway.topone.run/ws/</code></p>
+<h2 id='market-candlestick'>Market Candlestick</h2>
+<p>This topic sends a new candlestick whenever it is available.</p>
+<h3 id='subscribe'>Subscribe</h3>
+<blockquote>
+<p>Subscribe request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sub_kline_$market_$period"</span><span class="p">,</span><span class="w">  
+  </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="s2">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"zh-CN"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Method: <code>sub_kline_$market_$period</code></p>
+
+<p>Method Params:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>$market</td>
+<td>String</td>
+<td>market name</td>
+</tr>
+<tr>
+<td>$period</td>
+<td>String</td>
+<td>1m, 5m, 10m, 15m, 30m, 1h, 2h, 4h, 6h, 12h, 1d, 1w, 1mon</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Subscribe response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sub_kline_$market_$period"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="mi">1561948335075</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Subscribe Update example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sub_kline_TOP/ETH_1m"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="mi">1561948335075</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">[</span><span class="mi">1521700740</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.08040"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.07850"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.08067"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.07850"</span><span class="p">,</span><span class="w"> </span><span class="s2">"35.585"</span><span class="p">,</span><span class="w"> </span><span class="s2">"2.82398955"</span><span class="p">]</span><span class="w"> 
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Update Data:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>list.item</td>
+<td>Array</td>
+<td>[time, Open, Close, High, Low, quoteVolume, baseVolume]</td>
+</tr>
+</tbody></table>
+<h3 id='unsubscribe-2'>Unsubscribe</h3>
+<blockquote>
+<p>Unsubscribe request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unsub_kline_$market_$period"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="s2">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"zh-CN"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Method: <code>unsub_kline_$market_$period</code></p>
+
+<p>Method Params:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>$market</td>
+<td>String</td>
+<td>market name</td>
+</tr>
+<tr>
+<td>$period</td>
+<td>String</td>
+<td>1m, 5m, 10m, 15m, 30m, 1h, 2h, 4h, 6h, 12h, 1d, 1w, 1mon</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Unsubscribe response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unsub_kline_$market_$period"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="mi">1561948335075</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='pull-data-2'>Pull Data</h3>
+<p>Pull request is supported with extra parameters to define the range. The maximum number of ticks in each response is 300.</p>
+
+<blockquote>
+<p>Pull request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"req_kline_$market_$period"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"from"</span><span class="p">:</span><span class="w"> </span><span class="mi">1561948335</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"to"</span><span class="p">:</span><span class="w"> </span><span class="mi">1562948335</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"zh-CN"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Method: <code>req_kline_$market_$period</code></p>
+
+<p>Method Params:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>$market</td>
+<td>String</td>
+<td>market name</td>
+</tr>
+<tr>
+<td>$period</td>
+<td>String</td>
+<td>1m, 5m, 10m, 15m, 30m, 1h, 2h, 4h, 6h, 12h, 1d, 1w, 1mon</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Pull response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"req_kline_$market_$period"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="mi">1561948335075</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">[</span><span class="mi">1521700740</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.08040"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.07850"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.08067"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.07850"</span><span class="p">,</span><span class="w"> </span><span class="s2">"35.585"</span><span class="p">,</span><span class="w"> </span><span class="s2">"2.82398955"</span><span class="p">]</span><span class="w"> 
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Pull Response Data:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>list.item</td>
+<td>Array</td>
+<td>[time, Open, Close, High, Low, quoteVolume, baseVolume]</td>
+</tr>
+</tbody></table>
+<h2 id='market-depth'>Market Depth</h2>
+<p>This topic sends the latest market depth when it is updated.</p>
+<h3 id='subscribe-2'>Subscribe</h3>
+<blockquote>
+<p>Subscribe request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sub_depth_$market_$type"</span><span class="p">,</span><span class="w">  
+  </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="s2">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"zh-CN"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Method: <code>sub_depth_$market_$type</code></p>
+
+<p>Method Params:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>$market</td>
+<td>String</td>
+<td>market name</td>
+</tr>
+<tr>
+<td>$type</td>
+<td>String</td>
+<td>1x, 10x, 100x, 1000x</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Subscribe response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sub_depth_$market_$type"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="mi">1561948335075</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Subscribe Update example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sub_depth_TOP/ETH_1x"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="mi">1561948335075</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"time"</span><span class="p">:</span><span class="w"> </span><span class="mf">1521702329.776686</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"asks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">                           
+      </span><span class="p">[</span><span class="s2">"0.0791"</span><span class="p">,</span><span class="w"> </span><span class="s2">"2.038"</span><span class="p">]</span><span class="w">          
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"bids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">                       
+      </span><span class="p">[</span><span class="s2">"0.0793"</span><span class="p">,</span><span class="w"> </span><span class="s2">"2.151"</span><span class="p">]</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Update Data:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>time</td>
+<td>Float</td>
+<td>create time</td>
+</tr>
+<tr>
+<td>asks</td>
+<td>Array</td>
+<td>sell orders [price, amount]</td>
+</tr>
+<tr>
+<td>bids</td>
+<td>Array</td>
+<td>buy orders [price, amount]</td>
+</tr>
+</tbody></table>
+<h3 id='unsubscribe-3'>Unsubscribe</h3>
+<blockquote>
+<p>Unsubscribe request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unsub_depth_$market_$type"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="s2">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"zh-CN"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Method: <code>unsub_depth_$market_$type</code></p>
+
+<p>Method Params:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>$market</td>
+<td>String</td>
+<td>market name</td>
+</tr>
+<tr>
+<td>$type</td>
+<td>String</td>
+<td>1x, 10x, 100x, 1000x</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Unsubscribe response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unsub_depth_$market_$type"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="mi">1561948335075</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='ticker-data'>Ticker Data</h2>
+<p>Subscribe to ticker updates for all currency pairs.</p>
+<h3 id='subscribe-3'>Subscribe</h3>
+<blockquote>
+<p>Subscribe request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sub_deals_$market"</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="s2">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"zh-CN"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Method: <code>sub_deals_$market</code></p>
+
+<p>Method Params:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>$market</td>
+<td>String</td>
+<td>market name</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Subscribe response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sub_deals_$market"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="mi">1561948335075</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Subscribe Update example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sub_deals_TOP/ETH"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="mi">1561948335075</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">[</span><span class="mf">1521702193.322789</span><span class="p">,</span><span class="w"> </span><span class="s2">"0.07877"</span><span class="p">,</span><span class="w"> </span><span class="s2">"1.115"</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w">   </span><span class="err">//</span><span class="w"> 
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Update Data:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>list.item</td>
+<td>Array</td>
+<td>[time, price, quoteVolume, side(1:sell,2:buy)]</td>
+</tr>
+</tbody></table>
+<h3 id='unsubscribe-4'>Unsubscribe</h3>
+<blockquote>
+<p>Unsubscribe request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unsub_deals_$market"</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="s2">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"zh-CN"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Method: <code>unsub_deals_$market</code></p>
+
+<p>Method Params:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>$market</td>
+<td>String</td>
+<td>market name</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Unsubscribe response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unsub_deals_$market"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="mi">1561948335075</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h1 id='private-websocket'>Private Websocket </h1><h2 id='general'>General</h2>
+<p>You have to use <a href="#get-api-token">API Token</a> to connect to private websocket server. </p>
+
+<aside class="info"><b>You need to set the connection request header "Origin" to empty, otherwise you will not be able to establish the connection and get a 403 HTTP Status Code.</b></aside>
+<h2 id='private-websocket-url'>Private Websocket URL</h2>
+<p><code>wss://gateway.topone.run/ws/user/?token=YOUR_API_TOKEN</code></p>
+<h2 id='subscribe-to-account-updates'>Subscribe to Account Updates</h2>
+<p>This topic publishes all balance updates of the current account.</p>
+<h3 id='subscribe'>Subscribe</h3>
+<blockquote>
+<p>Subscribe request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sub_balance"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="s2">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"zh-CN"</span><span class="w">
+</span><span class="p">}</span><span class="err"> </span><span class="w">
+</span></code></pre>
+<p>Method: <code>sub_balance</code></p>
+
+<blockquote>
+<p>Subscribe response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sub_balance"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="mi">1561948335075</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Subscribe Update example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sub_balance"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="mi">1561948335075</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"asset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETH"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"available"</span><span class="p">:</span><span class="w"> </span><span class="s2">"99999980.24173"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"freeze"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23.596"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Update Data:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>asset</td>
+<td>String</td>
+<td>asset name</td>
+</tr>
+<tr>
+<td>available</td>
+<td>String</td>
+<td>available balance</td>
+</tr>
+<tr>
+<td>freeze</td>
+<td>String</td>
+<td>order freeze</td>
+</tr>
+</tbody></table>
+<h3 id='unsubscribe'>Unsubscribe</h3>
+<blockquote>
+<p>Unsubscribe request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unsub_balance"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="s2">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"zh-CN"</span><span class="w">
+</span><span class="p">}</span><span class="err"> </span><span class="w">
+</span></code></pre>
+<p>Method: <code>unsub_balance</code></p>
+
+<blockquote>
+<p>Unsubscribe response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unsub_balance"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="mi">1561948335075</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='subscribe-to-order-updates'>Subscribe to Order Updates</h2>
+<p>This topic publishes all order updates of the current account.</p>
+<h3 id='subscribe-2'>Subscribe</h3>
+<blockquote>
+<p>Subscribe request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sub_orders"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="s2">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"zh-CN"</span><span class="w">
+</span><span class="p">}</span><span class="err"> </span><span class="w">
+</span></code></pre>
+<p>Method: <code>sub_orders</code></p>
+
+<blockquote>
+<p>Subscribe response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sub_orders"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="mi">1561948335075</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Subscribe Update example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sub_orders"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="mi">1561948335075</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">132991</span><span class="p">,</span><span class="w">                      
+    </span><span class="s2">"market"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETH/BTC"</span><span class="p">,</span><span class="w">               
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">                         
+    </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">                         
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">                       
+    </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.08132"</span><span class="p">,</span><span class="w">                
+    </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.389"</span><span class="p">,</span><span class="w">                 
+    </span><span class="s2">"left"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">                       
+    </span><span class="s2">"dealStock"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.389"</span><span class="p">,</span><span class="w">              
+    </span><span class="s2">"dealMoney"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.10953654"</span><span class="p">,</span><span class="w">        
+    </span><span class="s2">"createTime"</span><span class="p">:</span><span class="w"> </span><span class="mf">1522235513.740678</span><span class="p">,</span><span class="w">   
+    </span><span class="s2">"updateTime"</span><span class="p">:</span><span class="w"> </span><span class="mf">1522235513.740684</span><span class="w">    
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Update Data:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>order id</td>
+</tr>
+<tr>
+<td>type</td>
+<td>Integer</td>
+<td>1: limit order 2: market order</td>
+</tr>
+<tr>
+<td>market</td>
+<td>String</td>
+<td>market name</td>
+</tr>
+<tr>
+<td>side</td>
+<td>Integer</td>
+<td>1: sell 2: buy</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Integer</td>
+<td>1:pending  2:completed  3:canceled 4:partial-canceled</td>
+</tr>
+<tr>
+<td>createTime</td>
+<td>Float</td>
+<td>order time</td>
+</tr>
+<tr>
+<td>updateTime</td>
+<td>Float</td>
+<td>update time</td>
+</tr>
+<tr>
+<td>price</td>
+<td>String</td>
+<td>order price</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>String</td>
+<td>order amount</td>
+</tr>
+<tr>
+<td>left</td>
+<td>String</td>
+<td>order left</td>
+</tr>
+<tr>
+<td>dealStock</td>
+<td>String</td>
+<td>quote volume</td>
+</tr>
+<tr>
+<td>dealMoney</td>
+<td>String</td>
+<td>base volume</td>
+</tr>
+</tbody></table>
+<h3 id='unsubscribe-2'>Unsubscribe</h3>
+<blockquote>
+<p>Unsubscribe request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unsub_orders"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="s2">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"zh-CN"</span><span class="w">
+</span><span class="p">}</span><span class="err"> </span><span class="w">
+</span></code></pre>
+<p>Method: <code>unsub_orders</code></p>
+
+<blockquote>
+<p>Unsubscribe response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unsub_orders"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="mi">1561948335075</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
       </div>
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
     </div>
